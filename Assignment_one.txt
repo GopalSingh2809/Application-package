@@ -1,0 +1,65 @@
+What is an Application Package?
+
+An application package is a bundle of files and metadata required to install and run an application. In Windows, modern application packages come in the MSIX format, which is a successor to older formats like .msi and .exe.
+
+Key Features of MSIX:
+
+Reliable and clean installation
+Automatic updates
+Improved security and app isolation
+Simplified deployment (supports sideloading and enterprise tools)
+MSIX is widely used for deploying desktop, UWP, and enterprise apps.
+
+
+Steps to Install an MSIX Package:
+
+1.Meet System Requirements
+
+Windows 10 version 1809 or later
+Power-shell 5.1+ or Windows Terminal
+Admin access (for some installations)
+
+2.Enable Sideloading (if needed)
+
+If the app is not from the Microsoft Store:
+
+Go to Settings > Update & Security > For Developers
+Choose Sideload apps
+Confirm when prompted
+
+3.Obtain the MSIX File
+
+Get the .msix or .appx file from:
+A trusted website
+Internal enterprise network or a App developer or IT department.
+
+4.Install via GUI (Double-click Method)
+
+Locate the .msix file
+Double-click it
+Click Install in the popup window
+
+
+
+
+
+
+5.Install via PowerShell:
+
+Useful for scripted or advanced installations:
+Powershell
+
+=>Add-AppxPackage -Path "C:\Path\To\App.msix"
+
+If the package requires frameworks or dependencies, install them first using the same command format.
+
+6.Verify Installation
+
+Check if the app is installed:
+
+Search for it in the Start Menu or run command on:
+
+Powershell
+
+=>Get-AppxPackage -Name "*AppName*"
+
